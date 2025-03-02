@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
+</head>
+<body>
+
+  <section class="mortagage__calculator">
+    <form action="" class="mortagage__form" id="form">
+      <div class="section__title">
+        <h1>
+          Mortgage Calculator
+        </h1>
+        <span href="#" class="clear__all" id="clear-all">
+          Clear All
+        </span>
+      </div>
+      <div class="form__input">
+        <label for="mortagage-amount">
+          Mortgage Amount
+        </label>
+        <input type="number" id="mortagage-amount" required> 
+        <p class="input__text">$</p>
+        <span class="error__message" id="error-message">This field is required</span>
+      </div>
+      <div class="form__input">
+        <label for="mortagage-term">
+          Mortgage Term
+        </label>
+        <input type="number" id="mortagage-term">
+        <p class="input__text__right">years</p>
+
+        <span class="error__message" id="error-message">This field is required</span>
+      </div>
+      <div class="form__input">
+        <label for="mortagage-interest">
+          Interest Rate
+        </label>
+        <input type="number" id="mortagage-interest">
+        <p class="input__text__right">%</p>
+
+        <span class="error__message" id="error-message">This field is required</span>
+      </div>
+      <fieldset>
+        <legend>Mortgage Type</legend>
+        <div class="checkbox__box">
+          <label for="repayment">
+            <input type="checkbox" id="repayment" name="mortgage-type" value="repayment">
+            Repayment
+          </div>
+        </label>
+        <div class="checkbox__box">
+        <label for="interest">
+          <input type="checkbox" id="interest" name="mortgage-type" value="interest">
+          Interest Only
+        </label>
+      </div>
+
+      </fieldset>
+      <button class="button__form" id="calculate"><img src="/assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
+    </form>
+    <div class="mortagage__results">
+    <div class="mortagage__empty__results">
+      <img src="/assets/images/illustration-empty.svg" alt="">
+      <h2>
+        Results shown here
+      </h2>
+      <p>
+        Complete the form and click “calculate repayments” to see what 
+        your monthly repayments would be.
+      </p>
+    </div>
+    <div class="mortagage__show__results">
+      <h2>
+        Your results
+      </h2>
+      <p>
+        Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.
+      </p>
+    </div>
+      <div class="mortagage__display__results">
+        <div class="result__main">
+          <span>
+            Your monthly repayments
+          </span>
+          <p id="monthly-repatyments">
+            $1,797.74
+          </p>
+        </div>
+        <div class="results__repay">
+          <span>
+            Total you'll repay over the term
+          </span>
+          <p id="result-repay">
+            $226,322.43
+          </p>
+        </div>
+    </div> 
+  </div>
+  </section>
+</body>
+</html>

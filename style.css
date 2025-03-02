@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+
+:root{
+    --color-lime: hsl(61, 70%, 52%);
+  --color-red: hsl(4, 69%, 50%);
+
+  /* Neutral Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-slate-100: hsl(202, 86%, 94%);
+  --color-slate-300: hsl(203, 41%, 72%);
+  --color-slate-500: hsl(200, 26%, 54%);
+  --color-slate-700: hsl(200, 24%, 40%);
+  --color-slate-900: hsl(202, 55%, 16%);
+
+  /* Typography */
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-size-paragraph: 16px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-white);
+    font-size: var(--font-size-paragraph);
+    font-family: var(--font-body);
+    width: 100%;
+}
+
+.mortagage__calculator{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__title{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-bottom: 1rem;
+}
+
+.section__title h1{
+    color: var(--color-slate-900);
+}
+.section__title span {
+    text-decoration: underline;
+    color: var(--color-slate-700);
+}
+
+.mortagage__form {
+    display: flex;
+    margin-inline: 25px;
+    flex-direction: column;
+}
+
+.form__input{
+    display: flex;
+    flex-direction: column;
+    margin-block: .5rem;
+    gap: .6rem;
+    position: relative;
+    display: inline-block;
+}
+
+.form__input input{
+    margin-top: .5rem;
+    padding: .9rem 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    border: 1px solid var(--color-slate-700);
+    outline: none;
+    width: 100%;
+}
+
+
+
+.input__text{
+    position: absolute;
+    top: 39%;
+    left: .2%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-slate-100);
+    height: 49px;
+    width: 40px;
+}
+
+.input__text__right{
+    position: absolute;
+    top: 37.3%;
+    right: .5%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-slate-100);
+    height: 50px;
+    width: 60px;
+    font-size: .9rem;
+}
+
+#mortagage-amount {
+    padding-left: 50px;
+}
+
+.form__input input:focus{
+    border: 1px solid var(--color-lime);
+}
+
+.form__input label{
+    font-size: .8rem;
+    color: var(--color-slate-700);
+}
+
+.error__message{
+    color: var(--color-red);
+    font-size: .7rem;
+    font-weight: 700;
+    display: none;
+}
+
+fieldset{
+    border: none;
+    display: flex;
+    margin-top: .8rem;
+    flex-direction: column;
+}
+
+fieldset legend{
+    color: var(--color-slate-700);
+    margin-bottom: .3rem;
+}
+
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-slate-500);
+    margin-right: .7rem;
+    border-radius: 50px;
+    background-color: var(--color-white);
+    display:inline-flex;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"]:checked {
+        position: relative;
+    border-color: var(--color-lime);
+  }
+
+  input[type="checkbox"]:checked::after {
+        content: "";
+    position: absolute;
+    background-color: var(--color-lime);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+  
+ 
+  .checkbox__box{
+    border: 1px solid var(--color-slate-500);
+    padding: .7rem 1.4rem;
+    margin-bottom: .5rem;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--color-slate-900);
+}
+
+
+
+.button__form{
+    background-color: var(--color-lime);
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--color-slate-900);
+    font-weight: 700;
+    font-size: 1.250rem;
+}
+
+.mortagage__results{
+    background-color: var(--color-slate-900);
+    padding-inline: 20px;
+   text-align: center;
+   padding-bottom: 2rem;
+}
+
+.mortagage__empty__results{
+    margin-block: 2rem;
+}
+
+.mortagage__empty__results h2{
+    margin-top: .5rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+}
+
+.mortagage__empty__results p{
+    color: var(--color-slate-300);
+    line-height: 1.5;
+}
+
+
+.mortagage__show__results{
+    color: var(--color-white);
+    text-align: start;
+    display: none;
+    margin-top: 2rem;
+}
+
+.mortagage__show__results h2{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.mortagage__show__results p{
+    color: var(--color-slate-300);
+    line-height: 1.5;
+}
+
+.mortagage__display__results{
+    display: none;
+    padding-bottom: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top:4px solid var(--color-lime);
+    border-radius: 10px;
+    background-color: rgb(6, 6, 43);
+    color: var(--color-white);
+    text-align: start;
+}
+
+.mortagage__display__results .result__main{
+    margin-inline: 20px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-slate-900);
+}
+.mortagage__display__results .result__main span{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-slate-500);
+}
+
+.mortagage__display__results .result__main p{
+    font-size: 3rem;
+    padding-top: .3rem;
+    color: var(--color-lime);
+}
+
+.results__repay{
+    margin-inline: 20px;
+
+    padding-bottom: .5rem;
+}
+
+.results__repay span{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-slate-500);
+}
+
+.results__repay p{
+    margin-top: .5rem;
+    font-size: 1.6rem;
+}
