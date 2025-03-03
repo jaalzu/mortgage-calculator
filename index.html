@@ -28,48 +28,46 @@
         <label for="mortagage-amount">
           Mortgage Amount
         </label>
-        <input type="number" id="mortagage-amount" required> 
+        <input type="number " step="0.1" min="0.1" id="mortagage-amount" > 
         <p class="input__text">$</p>
-        <span class="error__message" id="error-message">This field is required</span>
+        <span class="error__message" id="errorAmount"></span>
       </div>
       <div class="form__input">
         <label for="mortagage-term">
           Mortgage Term
         </label>
-        <input type="number" id="mortagage-term">
+        <input type="number" id="mortagage-term" step="0.1" min="0.1">
         <p class="input__text__right">years</p>
-
-        <span class="error__message" id="error-message">This field is required</span>
+        <span class="error__message" id="errorYears"></span>
       </div>
       <div class="form__input">
         <label for="mortagage-interest">
           Interest Rate
         </label>
-        <input type="number" id="mortagage-interest">
+        <input type="number" id="mortagage-interest" step="0.1" min="0.1">
         <p class="input__text__right">%</p>
-
-        <span class="error__message" id="error-message">This field is required</span>
+        <span class="error__message" id="errorInterest"></span>
       </div>
       <fieldset>
         <legend>Mortgage Type</legend>
         <div class="checkbox__box">
           <label for="repayment">
-            <input type="checkbox" id="repayment" name="mortgage-type" value="repayment">
+            <input type="radio" id="repayment" name="mortgage-type" value="repayment">
             Repayment
+          </label>
           </div>
-        </label>
         <div class="checkbox__box">
         <label for="interest">
-          <input type="checkbox" id="interest" name="mortgage-type" value="interest">
+          <input type="radio" id="interest" name="mortgage-type" value="interest">
           Interest Only
         </label>
       </div>
-
+      <span class="error__message" id="errorRadio"></span>
       </fieldset>
       <button class="button__form" id="calculate"><img src="/assets/images/icon-calculator.svg" alt=""> Calculate Repayments</button>
     </form>
     <div class="mortagage__results">
-    <div class="mortagage__empty__results">
+    <div class="mortagage__empty__results" id="display-empty-results">
       <img src="/assets/images/illustration-empty.svg" alt="">
       <h2>
         Results shown here
@@ -79,7 +77,8 @@
         your monthly repayments would be.
       </p>
     </div>
-    <div class="mortagage__show__results">
+    <div class="mortgage__show__results" id="mortgage-show-results">
+    <div class="mortagage__text__results">
       <h2>
         Your results
       </h2>
@@ -88,12 +87,12 @@
         To adjust the results, edit the form and click “calculate repayments” again.
       </p>
     </div>
-      <div class="mortagage__display__results">
+      <div class="mortagage__display__results" id="display-results">
         <div class="result__main">
           <span>
             Your monthly repayments
           </span>
-          <p id="monthly-repatyments">
+          <p id="monthly-repayments">
             $1,797.74
           </p>
         </div>
@@ -107,6 +106,10 @@
         </div>
     </div> 
   </div>
+
+  </div>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
